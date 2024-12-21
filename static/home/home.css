@@ -16,13 +16,15 @@ a {
 
 .nav {
     display: flex;
-    justify-content: right; /* Align items to the left */
+    justify-content: space-evenly; /* Align items to the left */
     align-items: center;
     gap: 0px; /* Adjust the spacing between elements */
     padding: 0; /* Remove extra padding */
     margin: 0; /* Remove extra margin */
     width: 100%;
     margin-right:10px; /* Ensure full width */
+    border-color: white;
+    z-index: 1;
 }
 
 .nav a,
@@ -45,7 +47,7 @@ a {
     /* color: #000;  */
     /* Black text on hover */
     border: 2px solid #00ff88; /* Add border effect */
-    border-radius: 25px; /* Slightly more rounded corners on hover */
+    border-radius: 15px; /* Slightly more rounded corners on hover */
 }
 
 /* Ensure logo alignment */
@@ -66,6 +68,8 @@ a {
     width: 100%;
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: solid;
+    border-color: white;
 }
 .hero {
     display: flex;            /* Flexbox for alignment */
@@ -214,13 +218,13 @@ a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
     /* background-color: #00ff88; */
      /* Green background on hover */
     /* color: #000; */
      /* Black font on hover */
     /* border-color: #00ff88; */
-}
+
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -491,4 +495,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+.cname{
+    width: 100px;
+
 }

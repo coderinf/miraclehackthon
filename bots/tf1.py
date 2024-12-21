@@ -5,7 +5,6 @@ import requests
 from datetime import datetime
 import emoji
 from flask import Flask, render_template
-
 app = Flask(__name__)
 
 green_heart = emoji.emojize(":green_heart:")

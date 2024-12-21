@@ -16,9 +16,10 @@ a {
 
 .nav {
     display: flex;
-    justify-content: right; /* Align items to the left */
+    justify-content: center; 
+    gap: 9rem;
     align-items: center;
-    gap: 0px; /* Adjust the spacing between elements */
+   /* Adjust the spacing between elements */
     padding: 0; /* Remove extra padding */
     margin: 0; /* Remove extra margin */
     width: 100%;

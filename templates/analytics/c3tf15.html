@@ -9,14 +9,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='analytics/c3tf15.css') }}">
 </head>
 <body>
-    <div class="container">
+     <div class="head">
         <h1>Algo Trading Bot Results</h1>
+     </div>
+    <div class="container">
+        
+
+
         <div class="results">
             {% for result in results %}
                 <div class="result">
                     <h2>{{ result }}</h2>
+                    
                     <p>Signal: {{ result.signal }}</p>
-                    <p>Price: {{ result.price }}</p>
+                    
                 </div>
             {% endfor %}
         </div>

@@ -1,0 +1,25 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Trading Bot Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='analytics/c3tf30.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Algo Trading Bot Results</h1>
+        <div class="results">
+            {% for result in results %}
+                <div class="result">
+                    <h2>{{ result }}</h2>
+                    <p>Signal: {{ result.signal }}</p>
+                    <p>Price: {{ result.price }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

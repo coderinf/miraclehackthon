@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='blogs/blog1.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a>My Blog</a></h1>
+            <nav>
+                <a >Publish a Post</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="main-content">
+            <h2>Latest Blog Posts</h2>
+            {% for post in posts %}
+                <div class="post-card">
+                    <img src="{{ post['featured_image'] or url_for('static', filename='images/default-image.jpg') }}" alt="Featured Image">
+                    <div class="post-info">
+                        <h3><a href="{{ url_for('show_post', post_id=post['_id']) }}">{{ post['title'] }}</a></h3>
+                        <p class="post-meta">
+                            <span>By {{ post['author'] }}</span> | 
+                            <span>{{ post['timestamp'].strftime('%B %d, %Y') }}</span> | 
+                            <span>{{ post['category'] }}</span>
+                        </p>
+                        <p>{{ post['content'][:150] }}...</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <div class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Finance</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Lifestyle</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 My Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>

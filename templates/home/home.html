@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='home/logo.png') }}" alt="Tradeziffy Logo" class="logo">
+        <nav class="nav">
+            <a href="#HOME">Home</a>
+            <a href="#products">Products</a>
+            <a href="#buy-crypto">Buy Crypto</a>
+            <div class="dropdown">
+                <button class="dropdown-button">Bots</button>
+                <div class="dropdown-content">
+                    <a href="tf15">TF15min</a>
+                    <a href="tf5">TF5min</a>
+                    <a href="tf1">TF1hr</a>
+                </div>
+            </div>
+            <a href="#LEARN">Learn</a>
+            <div class="dropdown">
+                <button class="dropdown-button">Canana</button>
+                <div class="dropdown-content">
+                    <a href="c3tf15">C3TF15min</a>
+                    <a href="c3tf30">C3TF30min</a>
+                    <a href="c3tf1">C3TF1hr</a>
+                </div>
+            </div>
+            <a href="#build">Build</a>
+            <a href="#institutional">Institutional</a>
+            <a href="blog">Blog</a>
+            <a href="#more">More</a>
+        </nav>
+    </header>    
+    <div class="hero">
+        <div class="hero-content">
+            <h1>You're almost there and get most out of it</h1>
+            <p>Verify your identity to start your crypto journey with us</p>
+            <a href="#" class="cta">Verify now</a>
+        </div>
+        <div class="candle-chart-container">
+            <div class="candle-chart">
+                <canvas id="candle-chart-canvas" width="800" height="600"></canvas>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='home/botimage.png') }}" alt="Crypto Trading Bot" class="hero-image">
+    </div>
+    <div class="content" id="about">
+        <h2>About Traditics</h2>
+        <p>Tradeiz is a leading platform for algorithmic trading, providing innovative tools and strategies for traders to maximize their profits. Our cutting-edge technology ensures you get the best out of the crypto markets.</p>
+    </div>
+    <div class="bottom-section">
+        <img src="{{ url_for('static', filename='home/hew1.png') }}" alt="Analytics Image" class="bottom-image">
+        <div class="bottom-content">
+            <h1>Get Real time Analytics with Our Trading Bots</h1>
+            <p>Take your trading to the next level with our advanced analytics and trading bots.</p>
+            <a href="/c3tf15" class="cta">Learn More</a>
+        </div>
+    </div>
+    <div class="bottom-section-2">
+        <div class="bottom-content-2">
+            <h2>CREATE YOUR STRATEGY WITH OUR LLM FGPT'S</h2>
+            <p>Get your algo trade strategy connected by api in one prompt</p>
+            <a href="#" class="cta">Explore Now</a>
+        </div>
+        <img src="{{ url_for('static', filename='home/gptana.png') }}" alt="Real-Time Analytics Image" class="bottom-image-2">
+    </div>
+    <div class="pricing-container">
+        <div class="pricing-header">
+            <label class="switch">
+                <input type="checkbox" id="pricing-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span>Monthly</span>
+        </div>
+        <div class="pricing-plans">
+            <div class="pricing-plan">
+                <h2>Free</h2>
+                <p>Free Basic Access</p>
+                <ul>
+                    <li>Market overview</li>
+                    <li>AI news feed</li>
+                    <li>Delayed analytics</li>
+                    <li>Simple flow data</li>
+                    <li>Daily scanner</li>
+                    <li>Free discord channels</li>
+                </ul>
+                <button>Get Started</button>
+            </div>
+            <div class="pricing-plan">
+                <h2 class="price">$69/month</h2>
+                <p>Full Pro Access</p>
+                <ul>
+                    <li>Live summary</li>
+                    <li>Live options flow</li>
+                    <li>Advanced analytics</li>
+                    <li>AI trade ideas</li>
+                    <li>AI portfolios</li>
+                    <li>Premium scanners</li>
+                    <li>Algorithmic analysis</li>
+                    <li>Discord premium community</li>
+                </ul>
+                <button>Become Pro</button>
+                <p class="note">$15 for first 15 days</p>
+            </div>
+            <div class="pricing-plan">
+                <h2 class="price">$199/month</h2>
+                <p>For Discord Server Owners</p>
+                <ul>
+                    <li>Traditics bot to your discord</li>
+                    <li>Options sweeps</li>
+                    <li>AI trade ideas</li>
+                    <li>News feed</li>
+                    <li>Live market data</li>
+                    <li>10+ bots</li>
+                </ul>
+                <button>Add to Your Server</button>
+                <p class="note">$15 for first 15 days</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='home/dropdown.js') }}"></script>
+    <script src="{{ url_for('static', filename='home/pricing.js') }}"></script>
+
+    <div class="newsLetter">
+        <div class="news">
+            <h1>Subscribe to<br> Tradytics digest.</h1>
+            <p1>Digest is our daily newsletter bringing you market summary & insights.</p1><br>
+            <label>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </label><br>
+            <p1>Newsletters are sent everyday before market start.</p1>
+        </div>
+        <div class="news">
+            <img src="{{ url_for('static', filename='home/newsLetter.jpg') }}">
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Traditics is a leading platform for algorithmic trading, providing innovative tools and strategies for traders to maximize their profits.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Buy Crypto</a></li>
+                    <li><a href="#">Learn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="#">support@mohnatraditics.com</a></p>
+                <p>Phone: +1 555 555 5555</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Traditics. All rights reserved.Mohan</p>
+        </div>
+    </footer>
+</body>
+</html>

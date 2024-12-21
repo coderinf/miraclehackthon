@@ -40,9 +40,9 @@ async def fetch_candlestick(pair, session):
                 data['open'] = pd.to_numeric(data['open'])
                 data['close'] = pd.to_numeric(data['close'])
                 data['signal'] = ((data['close'] - data['open']) / data['open']) * 100
-                if data['signal'][0] > 1.0:
+                if data['signal'][0] > 2.0:
                     send_signal_message(pair, data['signal'][0], "LONG", green_heart)
-                elif data['signal'][0] < -1.0:
+                elif data['signal'][0] < -2.0:
                     send_signal_message(pair, data['signal'][0], "SHORT", red_heart)
         else:
             print(f"Error fetching data for {pair}: {response.status}")

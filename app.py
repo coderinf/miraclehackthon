@@ -34,5 +34,9 @@ def ana3():
 @app.route("/blog")
 def blog2():
     return render_template("blogs/blog.html")
+@app.route("/voice")
+def voiceass():
+    return render_template("voiceass/voice.html")
+
 if __name__ == "__main__":
    app.run(host='0.0.0.0',debug=True)
